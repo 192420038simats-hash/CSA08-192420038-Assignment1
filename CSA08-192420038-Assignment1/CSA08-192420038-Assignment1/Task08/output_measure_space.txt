@@ -1,0 +1,6 @@
+n=    300  list     peak extra memory      33.6 KiB
+n=    300  running  peak extra memory       1.0 KiB
+n=   6000  list     peak extra memory     661.9 KiB
+n=   6000  running  peak extra memory       1.0 KiB
+n= 150000  list     peak extra memory   16488.2 KiB
+n= 150000  running  peak extra memory       1.0 KiB

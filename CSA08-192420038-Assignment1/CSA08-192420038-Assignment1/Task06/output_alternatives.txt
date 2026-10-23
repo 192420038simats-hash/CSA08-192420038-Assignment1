@@ -1,0 +1,3 @@
+functions : 0.501 s   inline script: 0.463 s   lambda: 0.422 s   (n = 500,000)
+totals    : 141950000.0 141950000.0 141950000.0
+overhead per entry (functions vs inline): 0.07 microseconds

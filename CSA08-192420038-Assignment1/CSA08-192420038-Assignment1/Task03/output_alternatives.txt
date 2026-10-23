@@ -1,0 +1,4 @@
+magic numbers   0.486 s for 1,000,000 calls -> 33.4
+dictionary      0.509 s for 1,000,000 calls -> 33.4
+constants       0.454 s for 1,000,000 calls -> 33.4
+Places to edit for a base-rate revision: magic numbers = k (every expression and every copy), dict = 1, constants = 1

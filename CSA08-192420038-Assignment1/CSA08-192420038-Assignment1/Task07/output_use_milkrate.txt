@@ -1,0 +1,7 @@
+module name seen inside milkrate: milkrate
+payout(8.5, 4.2, 8.7)               = 283.9
+milkrate.rate_per_litre(3.1, 8.3)   = 27.8
+mr.BASE_RATE                        = 30.0
+milkrate in sys.modules (loaded once): True
+first sys.path entry (script folder): Task07
+math.floor(-2.5) from standard module: -3

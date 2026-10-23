@@ -1,0 +1,18 @@
+input() always returns str, e.g. type of what the clerk types: <class 'str'>
+'8.5'     string-check=True   try/except -> 8.5
+' 8.5 '   string-check=True   try/except -> 8.5
+'8,5'     string-check=False  try/except -> None
+'eight'   string-check=False  try/except -> None
+'-3'      string-check=False  try/except -> -3.0
+''        string-check=False  try/except -> None
+'1e3'     string-check=False  try/except -> 1000.0
+'nan'     string-check=False  try/except -> nan
+'8.5.1'   string-check=False  try/except -> None
+  '8,5' is not a valid number - use digits and a decimal point, e.g. 8.5
+  'eight' is not a valid number - use digits and a decimal point, e.g. 8.5
+accepted litres = 8.5
+
+ID      Litres   Fat   SNF     Rate    Amount
+F001      10.0   3.5   8.5    30.00    300.00
+F002       8.5   4.2   8.7    33.40    283.90
+F003      12.0   3.1   8.3    27.80    333.60

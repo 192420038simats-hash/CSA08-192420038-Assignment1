@@ -1,0 +1,24 @@
+Case                                          Expected                Actual  Result
+standard milk                     rate 30.00 pay 300.00 rate 30.00 pay 300.00  PASS
+fat above, snf above              rate 33.40 pay 283.90 rate 33.40 pay 283.90  PASS
+fat below, snf below              rate 27.80 pay 333.60 rate 27.80 pay 333.60  PASS
+fat above, snf below              rate 30.50 pay 305.00 rate 30.50 pay 305.00  PASS
+fat below, snf above              rate 29.50 pay 295.00 rate 29.50 pay 295.00  PASS
+lowest allowed fat 2.0            rate 24.00 pay 240.00 rate 24.00 pay 240.00  PASS
+highest allowed fat 7.0           rate 44.00 pay 440.00 rate 44.00 pay 440.00  PASS
+7.5 L, 3.8/8.6                    rate 31.50 pay 236.25 rate 31.50 pay 236.25  PASS
+half-paisa: 8.25 L x 30.50        rate 30.50 pay 251.63 rate 30.50 pay 251.63  PASS
+text litres                                   rejected              rejected  PASS
+negative litres                               rejected              rejected  PASS
+zero litres                                   rejected              rejected  PASS
+comma decimal                                 rejected              rejected  PASS
+fat below 2.0                                 rejected              rejected  PASS
+fat above 7.0                                 rejected              rejected  PASS
+text fat                                      rejected              rejected  PASS
+snf out of range                              rejected              rejected  PASS
+NaN                                           rejected              rejected  PASS
+two decimal fat                               rejected              rejected  PASS
+three decimal litres                          rejected              rejected  PASS
+5-entry hand-calculated total                  1458.75               1458.75  PASS
+
+All tests passed.

@@ -1,0 +1,3 @@
+first import 99.7 microseconds (find, load, run once)
+later import 0.37 microseconds each (cache hit in sys.modules)
+Copy-paste design: a rate revision must be edited in every copy (k scripts = k edits); module design: 1 edit.

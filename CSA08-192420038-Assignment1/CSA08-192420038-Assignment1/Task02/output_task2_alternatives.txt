@@ -1,0 +1,16 @@
+exact bank total      : 33400.30
+integer paise         : 3340030 -> 33400.30
+float + round each add: 33400.3
+plain float           : 33400.30000000061
+Decimal               : 33400.30
+
+Memory per value (sys.getsizeof):
+  int paise 3340      28 bytes
+  float 33.4          24 bytes
+  Decimal('33.40')   104 bytes
+
+Time for 200,000 additions:
+  float         0.0101 s  result 6680000.000019469
+  float+round   0.0611 s  result 6680000.0
+  int paise     0.0812 s  result 668000000
+  Decimal       0.0491 s  result 6680000.00

@@ -1,0 +1,9 @@
+  10.0 L  fat 3.5  snf 8.5  -> Rs   300.00
+   8.5 L  fat 4.2  snf 8.7  -> Rs   283.90
+  12.0 L  fat 3.1  snf 8.3  -> Rs   333.60
+ten-day total: 917.5
+   1.0 L  fat 3.5  snf 8.5  -> Rs    30.00
+value returned by show_entry: None
+local BASE_RATE: 99 global BASE_RATE: 30.0
+reading global: 60.0
+UnboundLocalError: cannot access local variable 'BASE_RATE' where it is not associated with a value

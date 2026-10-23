@@ -1,0 +1,25 @@
+A/B. ORIGINAL float whole-step design versus v2 on two-decimal readings (standard card)
+  fat   snf    raw fat steps  original rate  v2 exact rate
+ 4.23  8.57   7.300000000000           33.1          33.13
+ 4.27  8.43   7.700000000000           32.9          32.87
+ 3.54  8.54   0.400000000000           30.0          30.28
+ 3.46  8.46  -0.400000000000           30.0          29.72
+
+D. Test table (expected = hand calculation)
+Case                                                Expected                Actual  Result
+std rate 4.2/8.7                                       33.40                 33.40  PASS
+std amount 8.5 L 4.2/8.7                              283.90                283.90  PASS
+summer rate 4.2/8.7 (32+7*.45+2*.3)                    35.75                 35.75  PASS
+summer amount 8.5 L (303.875 up)                      303.88                303.88  PASS
+summer standard milk 10 L                             320.00                320.00  PASS
+std rate 4.23/8.57 (7.3, 0.7 steps)                    33.13                 33.13  PASS
+summer rate 4.23/8.57 (35.495 up)                      35.50                 35.50  PASS
+std rate 3.46/8.46 (-0.4, -0.4)                        29.72                 29.72  PASS
+bonus: 520 L summer, bonus                            260.00                260.00  PASS
+bonus: 520 L summer, grand total                    16900.00              16900.00  PASS
+bonus: exactly 500 L -> no bonus                        0.00                  0.00  PASS
+bonus: 500.01 L (250.005 up)                          250.01                250.01  PASS
+bonus: 500.01 L grand total                         16250.33              16250.33  PASS
+std season 520 L grand total                        15860.00              15860.00  PASS
+
+All 14 v2 tests passed.

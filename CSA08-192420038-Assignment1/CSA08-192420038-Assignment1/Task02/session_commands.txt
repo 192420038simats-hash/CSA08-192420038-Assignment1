@@ -1,0 +1,25 @@
+type(10)
+type(10.0)
+type("10")
+type(True)
+type([10, 8.5])
+7 / 2
+7 // 2
+7 % 2
+-7 // 2
+-7 % 2
+0.1 + 0.2
+0.1 + 0.2 == 0.3
+abs((0.1 + 0.2) - 0.3) < 1e-9
+isinstance(True, int)
+True + True
+round(2.675, 2)
+from decimal import Decimal
+Decimal("2.675")
+Decimal(2.675)
+Decimal("0.1") + Decimal("0.2") == Decimal("0.3")
+t = 0.0
+for i in range(10): t += 0.1
+
+t
+t == 1.0

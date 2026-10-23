@@ -1,0 +1,3 @@
+t =      6 values: start-up    0.142 ms, file       90 bytes, one-time cost per program start
+t =    600 values: start-up    0.487 ms, file    10090 bytes, one-time cost per program start
+t =  60000 values: start-up   39.876 ms, file  1128890 bytes, one-time cost per program start

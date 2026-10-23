@@ -1,0 +1,5 @@
+<class 'int'> 10
+<class 'str'> ten
+Rebinding is allowed: 99
+after swap a, b = 8.5 3.5
+8.5 4.2 8.7
