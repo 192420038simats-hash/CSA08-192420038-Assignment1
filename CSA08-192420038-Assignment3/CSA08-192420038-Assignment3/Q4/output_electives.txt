@@ -1,0 +1,14 @@
+duplicates removed: 6 -> 4 and 5 -> 4
+
+result                                by hand                       program                       ok
+union (registered in at least one)    ['S1', 'S2', 'S3', 'S4', 'S5', 'S6']['S1', 'S2', 'S3', 'S4', 'S5', 'S6']True
+intersection (clash)                  ['S3', 'S5']                  ['S3', 'S5']                  True
+only first                            ['S1', 'S2']                  ['S1', 'S2']                  True
+only second                           ['S4', 'S6']                  ['S4', 'S6']                  True
+symmetric difference (exactly one)    ['S1', 'S2', 'S4', 'S6']      ['S1', 'S2', 'S4', 'S6']      True
+not registered                        ['S7', 'S8']                  ['S7', 'S8']                  True
+
+Edge cases
+  empty electives   : [] ['S1', 'S2', 'S3'] ...
+  identical electives: clash ['S1', 'S2', 'S3']  exactly one []  only first []
+  one empty          : ['S1'] []
