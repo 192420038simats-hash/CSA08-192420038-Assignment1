@@ -1,0 +1,11 @@
+digraph F { rankdir=TB; node [fontname="DejaVu Sans", fontsize=10, shape=box, style="rounded,filled", fillcolor="#f4f8ff"]; edge [fontname="DejaVu Sans", fontsize=9];
+IN [label="Department files\ncse.txt  ece.txt  mech.txt  civil.txt  it.txt", shape=folder, fillcolor="#fff4d6"];
+OPEN [label="open one file (with)\nread one line at a time"]; MISS [label="FileNotFoundError / PermissionError /\nUnicodeDecodeError", shape=box, fillcolor="#ffd6d6"];
+VAL [label="validate_line()\n5 fields? register? name? e-mail? events?", shape=diamond, fillcolor="#ffffff"];
+DUP [label="register number\nalready in the set `seen`?", shape=diamond, fillcolor="#ffffff"];
+ADD [label="add to seen\nstore as a new student"]; MERGE [label="merge the events\ninto the first registration"];
+LOG [label="error log\n(file, line, reason, text)", shape=note, fillcolor="#ffd6d6"];
+OUT [label="after all files:\nmaster_list.csv   events/<event>.txt\nsummary_report.txt   error_log.txt", shape=folder, fillcolor="#d6f5d6"];
+IN -> OPEN; OPEN -> MISS [label="file problem"]; MISS -> LOG [label="log, go to next file"]; OPEN -> VAL [label="each line"];
+VAL -> LOG [label="InvalidRegistration\n(log, next line)"]; VAL -> DUP [label="valid"]; DUP -> MERGE [label="yes"]; DUP -> ADD [label="no"];
+MERGE -> LOG [label="log duplicate", style=dashed]; ADD -> OUT; MERGE -> OUT; LOG -> OUT [style=dashed]; }

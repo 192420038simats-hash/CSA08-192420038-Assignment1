@@ -1,0 +1,5 @@
+ bad lines  EAFP ns/line  LBYL ns/line   same result
+        0%           127           132   True
+        1%           120           131   True
+       10%           165           125   True
+       50%           383           157   True

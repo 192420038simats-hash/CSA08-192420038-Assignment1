@@ -1,0 +1,4 @@
+192311001,Anitha K,CSE,anitha@college.edu,Dance;Quiz
+192311002,Bala Murugan,CSE,bala.murugan@college.edu,Quiz;Music
+192311003,Chitra S,CSE,chitra@college,Dance
+192311004,Deepak R,CSE,deepak@college.edu,Drama

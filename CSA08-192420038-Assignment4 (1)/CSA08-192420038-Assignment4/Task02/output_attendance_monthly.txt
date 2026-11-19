@@ -1,0 +1,15 @@
+6 daily files read, 4 damaged/duplicate/empty entries logged
+register    present  total  percent
+192311001         5      5   100.00
+192311002         4      5    80.00
+192311003         2      4    50.00
+192311004         2      4    50.00
+192311005         4      5    80.00
+
+below 75 %: ['192311003', '192311004']
+
+--- damaged_lines.log ---
+attendance_2026-10-07.txt:3: expected 3 fields, found 2: '192311003,2026-10-07'
+attendance_2026-10-08.txt:4: invalid status 'X': '192311004,2026-10-08,X'
+attendance_2026-10-09.txt:6: duplicate record for this student and date: '192311002,2026-10-09,P'
+attendance_2026-10-10.txt:0: file is empty: ''

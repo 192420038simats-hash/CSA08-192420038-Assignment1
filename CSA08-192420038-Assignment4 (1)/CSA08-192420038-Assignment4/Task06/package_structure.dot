@@ -1,0 +1,8 @@
+digraph P { rankdir=LR; node [fontname="DejaVu Sans Mono", fontsize=10, shape=record, style=filled, fillcolor="#f4f8ff"];
+M [label="{main.py|DEPARTMENTS\lrun(data, out, DEPARTMENTS)\l}"];
+subgraph cluster_fest { label="package fest/"; fontname="DejaVu Sans"; style=dashed;
+ I [label="{__init__.py|package description\l}"];
+ PL [label="{pipeline.py|process_files(data_dir, departments)\lrun(data_dir, out_dir, departments)\l}"];
+ R [label="{reader.py|read_lines(path)\l}"]; V [label="{validator.py|InvalidRegistration\lvalid_email(email)\lclean_events(text)\lvalidate_line(line)\l}"];
+ W [label="{writer.py|write_master(...)\lwrite_event_files(...)\lwrite_error_log(...)\lwrite_summary(...)\l}"]; }
+M -> PL; PL -> R; PL -> V; PL -> W; }

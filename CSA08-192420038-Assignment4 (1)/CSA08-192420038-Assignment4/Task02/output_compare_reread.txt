@@ -1,0 +1,5 @@
+students s  files f  lines/file l  line reads (re-read)  line reads (one pass)  time re-read s  time one pass s  same
+        50       20            50                50,000                  1,000           0.072           0.0019  True
+       100       20           100               200,000                  2,000           0.254           0.0047  True
+       200       20           200               800,000                  4,000           0.824           0.0059  True
+       400       20           400             3,200,000                  8,000           3.233           0.0123  True

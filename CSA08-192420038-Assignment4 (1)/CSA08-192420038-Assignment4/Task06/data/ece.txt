@@ -1,0 +1,4 @@
+192312001,Eswari M,ECE,eswari@college.edu,Music;Dance
+192311001,Anitha K,CSE,anitha@college.edu,Music
+192312002,Farook A,ECE,farook@@college.edu,Drama
+192312003,Gowri M,ECE

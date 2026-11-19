@@ -1,0 +1,10 @@
+files expected                 5
+files read                     4
+files missing/unreadable       1
+lines read                    14
+registrations accepted         7
+duplicates merged              1
+lines rejected                 6
+students in master list        7
+participants per event: {'Dance': 3, 'Drama': 3, 'Music': 5, 'Quiz': 4}
+outputs written to 'out/': master_list.csv, events/, summary_report.txt, error_log.txt

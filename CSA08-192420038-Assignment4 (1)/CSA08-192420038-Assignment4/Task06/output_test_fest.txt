@@ -1,0 +1,34 @@
+1. e-mail validation with string methods
+   'anitha@college.edu'         -> True
+   'a.b-c@dept.college.ac.in'   -> True
+   'chitra@college'             -> False
+   'farook@@college.edu'        -> False
+   'jayanth p@college.edu'      -> False
+   '@college.edu'               -> False
+   'x@.edu'                     -> False
+   'x@college.'                 -> False
+   'x@col..edu'                 -> False
+   'x@college.e'                -> False
+   'x@college.123'              -> False
+   ''                           -> False
+
+2. line validation
+   '1,2,3'                              -> InvalidRegistration: damaged line: expected 5 fields, found 3
+   '19231100,A,CSE,a@b.co,Quiz'         -> InvalidRegistration: invalid register number '19231100'
+   '192311001, ,CSE,a@b.co,Quiz'        -> InvalidRegistration: name is empty
+   '192311001,A,CSE,a@b.co,;;'          -> InvalidRegistration: no event chosen
+
+3. clean files (no errors at all)
+   students: 3  errors: []
+
+4. the five sample files: duplicate, invalid e-mails, damaged line, bad register number, missing file
+   accepted 7, rejected 6, duplicate merged 1, missing file 1 -> all as calculated by hand
+
+5. every file missing / wrong encoding / folder instead of file: the program still finishes
+   no data folder  -> 2 files reported missing, students: 0
+   wrong encoding / folder -> [('bad.txt', 'BAD ENCODING'), ('folder.txt', 'UNREADABLE')] | program finished, students: 0
+
+6. empty folder of outputs is created and written
+   outputs: ['error_log.txt', 'events', 'master_list.csv', 'summary_report.txt']
+
+All tests passed.

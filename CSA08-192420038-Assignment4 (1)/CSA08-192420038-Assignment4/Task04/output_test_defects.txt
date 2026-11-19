@@ -1,0 +1,13 @@
+Defect 1 and 2: three days processed one after the other
+  after day1.txt: returns.log = 'Python BasicsData Structures'
+  after day2.txt: returns.log = 'Operating SystemsNetworks'
+  after day3.txt: returns.log = 'AlgorithmsDatabases'
+  -> the log holds ONLY day 3 (mode 'w' empties the file each time) and the titles are run together (no newline).
+
+Defect 3: a write() that fails leaves the file open and its buffered data unsaved
+  TypeError raised by write(); open file descriptors before 4, after 5  (one file left open)
+  content of returns.log on disk while the file is still open: ''  ('Chemistry' was lost)
+  process() catches only FileNotFoundError, so this TypeError stops the program and no message is written anywhere.
+
+Defect 4: process() opens the day file and never closes it explicitly
+  3 files opened without close(): descriptors 4 -> 7

@@ -1,0 +1,3 @@
+below 75 %: ['192311002', '192311003', '192311004']
+errors logged: 1
+absent 3 or more consecutive days: [('192311002', 3)]

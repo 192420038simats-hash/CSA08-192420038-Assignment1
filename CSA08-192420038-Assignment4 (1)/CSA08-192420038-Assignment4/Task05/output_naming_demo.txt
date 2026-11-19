@@ -1,0 +1,7 @@
+1 import attendance.stats       -> 75.00
+2 from attendance import stats  -> 75.00
+3 from attendance.stats import percentage -> 75.00
+all three refer to the same function object: True
+conflict with form 3: 'int' object is not callable
+forms 1 and 2 are still safe: 75.00
+shadowed floor: my own floor | math.floor still works: 2

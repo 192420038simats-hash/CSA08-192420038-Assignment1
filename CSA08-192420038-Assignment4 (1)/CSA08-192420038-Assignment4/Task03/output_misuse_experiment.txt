@@ -1,0 +1,3 @@
+correct data, misused version : (0, 0, [])  <- the right answer is (2, 1, [])
+specific excepts, same typo    : UnboundLocalError: cannot access local variable 'presnt' where it is not associated with a value  <- the error is visible and points to the line
+specific excepts, no typo      : (2, 1, [])

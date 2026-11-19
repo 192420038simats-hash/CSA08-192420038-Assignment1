@@ -1,0 +1,10 @@
+version               files left open after 100 failed calls
+original (no close)                                      100
+manual try/finally                                         0
+with statement                                             0
+
+operating-system limit on open files for this process: 20000  (the original would fail with 'Too many open files' after about that many errors)
+
+version                time for 20,000 calls   peak memory
+manual try/finally                   1.574 s       12.5 KiB
+with statement                       1.621 s       12.4 KiB

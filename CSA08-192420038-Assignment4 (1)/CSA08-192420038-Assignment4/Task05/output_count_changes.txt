@@ -1,0 +1,5 @@
+organisation       files  files changed  lines added  lines removed   changed files
+a_single_script        1              1           25              0   attendance_all.py
+b_one_module           2              2           25              0   attendance_lib.py, main_b.py
+c_three_modules        4              3           27              2   main_c.py, report.py, stats.py
+d_package              5              3           25              0   report.py, stats.py, main_d.py

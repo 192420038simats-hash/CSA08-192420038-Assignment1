@@ -1,0 +1,19 @@
+day1.txt           processed: True
+day2.txt           processed: True
+day3.txt           processed: True
+day4_missing.txt   processed: False
+day5.txt           processed: False
+
+returns.log:
+day1,Python Basics
+day1,Data Structures
+day2,Operating Systems
+day2,Networks
+day3,Algorithms
+day3,Databases
+
+errors.log (first lines of each entry):
+  2026-11-11 04:13:56  day4_missing.txt: FileNotFoundError: [Errno 2] No such file or directory: 'day4_missing.txt'
+  2026-11-11 04:13:56  day5.txt: UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 10: invalid start byte
+
+20 failed writes with the repaired save_returns(): open files before 4, after 4 (none left open)

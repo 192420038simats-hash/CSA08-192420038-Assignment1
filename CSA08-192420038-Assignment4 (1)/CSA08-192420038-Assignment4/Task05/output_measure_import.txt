@@ -1,0 +1,7 @@
+organisation       files  lines   first import (fresh process)   import again (cached)  memory after import
+a single script        1     90                        479 us                0.59 us             12.2 KiB
+b one module           1     75                        486 us                0.58 us             12.1 KiB
+c three modules        3     77                        938 us                1.36 us             15.5 KiB
+d package              4     78                       1201 us                3.34 us             17.7 KiB
+
+(decimal and pathlib are imported before the timing starts, so only the project's own modules are measured; median of 15 fresh runs; 'cached' = the second import statement in the same process: modules are found in sys.modules)
