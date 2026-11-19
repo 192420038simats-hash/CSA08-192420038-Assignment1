@@ -1,0 +1,24 @@
+['Tea', 'Vada'] ['Tea', 'Vada']
+['Tea'] ['Vada']
+add_item_buggy.__defaults__ -> (['Tea', 'Vada'],)
+add_item.__defaults__       -> (None,)
+same list object returned twice: True
+
+Three customers in sequence (independent orders):
+   ['Tea', 'Vada']
+   ['Coffee']
+   ['Idli', 'Dosa', 'Tea']
+
+Closure alternative (one add() per customer):
+  customer 1: ['Tea', 'Vada', 'Samosa'] | customer 2: ['Coffee', 'Bun']
+
+Parameter styles:
+  positional : (65, 3.25)
+  keyword    : (65, 7.8)
+  unpacked   : total=65 gst=3.25
+
+Scope demos:
+  local_demo() -> 99 | global counter = 0
+  after global_demo() -> counter = 1
+  without global -> UnboundLocalError: cannot access local variable 'counter' where it is not associated with a value
+  nonlocal outer() -> 2

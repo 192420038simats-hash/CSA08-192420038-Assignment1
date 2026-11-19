@@ -1,0 +1,22 @@
+Units  Card   80+ | Separate ifs                                  | if-elif-else                   | Predicted? 
+-------------------------------------------------------------------------------------------------------------------
+   50 False False | ['full subsidy']                              | full subsidy                   | OK
+  100 False False | ['full subsidy']                              | full subsidy                   | OK
+  101  True False | ['partial subsidy']                           | partial subsidy                | OK
+  101 False False | ['no subsidy']                                | no subsidy                     | OK
+  200  True False | ['partial subsidy']                           | partial subsidy                | OK
+  200 False False | ['no subsidy']                                | no subsidy                     | OK
+  201 False  True | ['special subsidy (80+ member)']              | special subsidy (80+ member)   | OK
+  201 False False | ['no subsidy']                                | no subsidy                     | OK
+   50  True False | ['full subsidy', 'partial subsidy']           | full subsidy                   | OK <-- DOUBLE
+
+Time per decision (microseconds, 200,000 calls each, k = 3 slabs):
+  chained           0.062 us
+  table_lookup      0.116 us
+  match_version     0.066 us
+
+Scaling with k slabs (list scan O(k) vs bisect O(log k)), worst-case query:
+  k=    10: scan      0.397 us   bisect    0.052 us
+  k=   100: scan      2.387 us   bisect    0.076 us
+  k=  1000: scan     26.851 us   bisect    0.098 us
+  k= 10000: scan    271.512 us   bisect    0.106 us
