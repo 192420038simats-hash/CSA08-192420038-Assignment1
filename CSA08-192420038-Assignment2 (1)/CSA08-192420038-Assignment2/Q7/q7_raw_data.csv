@@ -1,0 +1,6 @@
+n,original_calls,redesign_steps,orig_s,new_s,same
+10,177,9,1.1e-05,9.6e-07,True
+20,21891,19,0.001189,9.5e-07,True
+25,242785,24,0.014334,1.14e-06,True
+30,2692537,29,0.148887,1.92e-06,True
+1000,RecursionError,999,,4.561e-05,True
