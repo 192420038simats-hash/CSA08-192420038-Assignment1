@@ -1,0 +1,17 @@
+get() version      : [('seeds', 3), ('delayed', 2), ('price', 2), ('pump', 2), ('received', 2)]
+setdefault() version: [('seeds', 3), ('delayed', 2), ('price', 2), ('pump', 2), ('received', 2)]  same: True
+
+complaints per district: {'Thanjavur': 2, 'Madurai': 2, 'Salem': 1}
+  Thanjavur: ['Seeds not received, seeds delayed!', 'seeds price high; subsidy not received.']
+  Madurai: ['Fertiliser price HIGH', 'Pump is not working. Pump repair delayed']
+  Salem: ['']
+complaints per crop    : {'paddy': 2, 'cotton': 2, 'turmeric': 1}
+
+views:
+  keys()  : dict_keys(['seeds', 'price'])  values(): dict_values([3, 2])  items(): dict_items([('seeds', 3), ('price', 2)])
+  after adding a key the views change too (they are live): dict_keys(['seeds', 'price', 'subsidy']) dict_values([3, 2, 1])
+
+edge cases
+  empty text           -> {} {}
+  upper/lower case     -> {'seeds': 3}
+  punctuation          -> {'seeds': 4}

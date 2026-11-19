@@ -1,0 +1,20 @@
+number formats -> ['9840012345', '9840012345', '9840012345', '9840012345', '4423456789', None, None]
+name formats   -> ['ravi', 'ravi kumar', 'ravi k', 's meena']
+
+10 contacts in -> 6 people out
+  Arun           names=['Arun']  numbers=['9876543210']  emails=[]
+  Arun           names=['Arun']  numbers=['9123456789']  emails=[]
+  Kumar Stores   names=['Kumar Stores']  numbers=[]  emails=['shop@z.com']
+  Meena S        names=['Meena', 'Meena S']  numbers=['9841055555']  emails=['meena@y.com']
+  NoInfo         names=['NoInfo']  numbers=[]  emails=[]
+  ravi kumar     names=['Dr. Ravi', 'R Kumar', 'RAVI K', 'ravi kumar']  numbers=['4423456789', '9444411111', '9840012345']  emails=['ravi@x.com']
+
+hand-merged expectation (6 people) matches: True
+pairwise method finds the same 6 groups, sizes [1, 1, 1, 1, 2, 4]
+
+Edge cases
+  empty list          -> []
+  duplicate contacts  -> 1 person
+  invalid number only -> 2 people (invalid numbers are not used to match)
+  same name no id     -> 1 person (identical normalised names collapse)
+  shared family phone -> 1 person  <- limitation: shared number merges two people

@@ -1,0 +1,8 @@
+method                   time s   extra memory                       same result?
+slice + sum (naive)      0.1414   O(w) per window + result O(n)      True
+running sum (list)       0.0387   O(1) + result O(n)                 True
+deque(maxlen=7)          0.0741   O(w) window + result O(n)          True
+deque + running sum      0.0450   O(w) window + result O(n)          True
+dict keyed by date       0.3310   O(n) dict + sorted keys O(n)       True
+
+sys.getsizeof: list of 365,000 floats 2,926,776 bytes (pointers only); dict of 365,000 dates 20,971,600 bytes (table only)

@@ -1,0 +1,7 @@
+digraph M { rankdir=LR; node [fontname="DejaVu Sans Mono", fontsize=11, shape=record, style=filled, fillcolor="#f4f8ff"];
+label="Memory diagram: bad = [[0]*3]*3 (left)   good = [[0]*3 for _ in range(3)] (right)"; labelloc=t; fontname="DejaVu Sans";
+subgraph cluster_bad { label="bad: three references to ONE inner list"; style=dashed;
+  b [label="{bad (outer list)|<r0> row 0|<r1> row 1|<r2> row 2}"]; i [label="{one inner list|0|0|0}", fillcolor="#ffd6d6"]; b:r0 -> i; b:r1 -> i; b:r2 -> i; }
+subgraph cluster_good { label="good: three SEPARATE inner lists"; style=dashed;
+  g [label="{good (outer list)|<r0> row 0|<r1> row 1|<r2> row 2}"]; g0 [label="{list A|0|0|0}", fillcolor="#d6f5d6"]; g1 [label="{list B|0|0|0}", fillcolor="#d6f5d6"]; g2 [label="{list C|0|0|0}", fillcolor="#d6f5d6"];
+  g:r0 -> g0; g:r1 -> g1; g:r2 -> g2; } }
