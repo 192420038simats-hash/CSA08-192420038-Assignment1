@@ -1,3 +1,0 @@
-# Standard library only: random, time, timeit, sys, copy, string, datetime, collections, tracemalloc.
-# Q4/venn.py (the Venn diagram picture) additionally uses matplotlib 3.10 - optional, only to redraw the picture.
-matplotlib>=3.5
