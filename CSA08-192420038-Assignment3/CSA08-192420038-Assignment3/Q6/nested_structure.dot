@@ -1,8 +1,0 @@
-digraph N { rankdir=TB; node [fontname="DejaVu Sans Mono", fontsize=11, shape=record, style=filled, fillcolor="#f4f8ff"];
-T [label="{timetable : dict|<a> \"12624\"|\"12007\"|... }"];
-R [label="{train record : dict|<n> \"name\" : str|<s> \"stops\" : list|<d> \"days\" : set}"];
-S [label="{stops : list|<s0> [0] tuple|<s1> [1] tuple|<s2> [2] tuple|[3] tuple}", fillcolor="#fff4d6"];
-U [label="{stop : tuple|(0) station : str|(1) arrival : str|(2) departure : str}", fillcolor="#fff4d6"];
-D [label="{days : set|\"Mon\", \"Tue\", ...}", fillcolor="#d6f5d6"];
-T:a -> R; R:s -> S; S:s2 -> U; R:d -> D;
-E [shape=note, fillcolor="#ffffff", label="timetable[\"12624\"][\"stops\"][2][2]  ->  departure of the third station"]; }
