@@ -1,0 +1,4 @@
+stations       rows |  pandas: read CSV + filter  SQL scan (no index)  SQL with index |  CSV on disk  DB on disk  DataFrame in RAM | same answer
+      12    105,120 |                    0.071 s              5.76 ms        0.182 ms |       4.2 MB      8.7 MB           16.0 MB | True
+     120  1,051,200 |                    0.584 s             51.72 ms        0.190 ms |      42.4 MB     87.9 MB          159.8 MB | True
+query plan with index: SEARCH readings USING INDEX idx_station_day (station_id=? AND day>? AND day<?)

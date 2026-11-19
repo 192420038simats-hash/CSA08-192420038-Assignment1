@@ -1,0 +1,4 @@
+      rows |  csv loops: time  extra RAM |  pandas: time  extra RAM | speed-up | rows kept / valid pm25 / mean pm25 equal?
+     1,000 |          0.020 s     2.4 MB |       0.011 s     2.9 MB |     1.8x | 1000 / 1000 / 60.230 -> True
+   100,000 |          1.135 s    74.6 MB |       0.240 s    20.1 MB |     4.7x | 100000 / 100000 / 59.982 -> True
+ 1,000,000 |         12.068 s   726.2 MB |       2.631 s   155.8 MB |     4.6x | 1000000 / 999997 / 60.000 -> True

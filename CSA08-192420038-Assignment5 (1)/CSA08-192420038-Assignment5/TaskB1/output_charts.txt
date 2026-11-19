@@ -1,0 +1,5 @@
+chart1: network mean ranges 60.5 to 98.2 ug/m3; days above 60: 31 of 31
+chart2: highest Manali 118.3 | lowest Adyar 47.4 | stations above 60: 8
+chart3: 372 station-days, correlation r = -0.306
+chart4: worst hours [(20, 99.4), (8, 97.7), (18, 97.7)] | best hour 14 57.9
+chart5: median highest Manali 115.9 | widest IQR Manali 36.2

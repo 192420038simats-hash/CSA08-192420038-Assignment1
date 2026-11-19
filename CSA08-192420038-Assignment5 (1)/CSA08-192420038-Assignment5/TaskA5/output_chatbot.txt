@@ -1,0 +1,36 @@
+(database: latest day = 2026-10-31)
+
+user : What is the PM2.5 in Adyar today?
+bot  : The mean PM2.5 at Adyar on 2026-10-31 is 48.0 ug/m3 - satisfactory.
+
+user : pm25 in guindy
+bot  : The mean PM2.5 at Guindy on 2026-10-31 is 71.6 ug/m3 - moderate.
+
+user : What is the average PM2.5 at Manali this month?
+bot  : The average PM2.5 at Manali over the stored month is 118.3 ug/m3 (poor).
+
+user : How is the air in Adyr?
+bot  : The mean PM2.5 at Adyar on 2026-10-31 is 48.0 ug/m3 - satisfactory.
+
+user : Which is the most polluted station today?
+bot  : The most polluted station on 2026-10-31 is Manali with a mean PM2.5 of 120.6 ug/m3 (very poor).
+
+user : compare Adyar and Manali pm2.5
+bot  : Mean PM2.5 on 2026-10-31 (ug/m3) - Adyar: 48.0, Manali: 120.6.
+
+user : What is the PM2.5 in Mumbai today?
+bot  : Which station do you mean? Try: 'What is the PM2.5 in Adyar today?'
+
+user : Is the air clean in Adyar or not?
+bot  : The mean PM2.5 at Adyar on 2026-10-31 is 48.0 ug/m3 - satisfactory.
+
+user : Will it rain tomorrow?
+bot  : Sorry, I did not understand. Type 'help' to see what I can answer.
+
+user : PM2.5 in Adyar DROP TABLE readings; --
+bot  : The mean PM2.5 at Adyar on 2026-10-31 is 48.0 ug/m3 - satisfactory.
+
+user : help
+bot  : I can tell you the PM2.5 of a station today, its monthly average, the most or least polluted station, or list the stations.
+
+readings table still has 8912 rows

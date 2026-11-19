@@ -1,0 +1,46 @@
+52 complaints; my own reading: {'negative': 26, 'positive': 14, 'neutral': 12}
+
+Sentiment scorer, negation window 1: agrees with me on 49 of 52 = 94.2%
+   my reading \ scorer    positive negative  neutral
+   positive                     14        0        0
+   negative                      1       24        1
+   neutral                       0        1       11
+Sentiment scorer, negation window 2: agrees with me on 49 of 52 = 94.2%
+   my reading \ scorer    positive negative  neutral
+   positive                     14        0        0
+   negative                      1       24        1
+   neutral                       0        1       11
+
+Complaints labelled differently from my reading (window 1):
+   scorer positive me negative | Oh wonderful, the app is so fast that it crashed again. Great job. I still cannot see any reading.
+   scorer neutral  me negative | I can't say the air is not dirty near the Manali road. Smoke every evening. Please do something.
+   scorer negative me neutral  | I saw smoke near the beach yesterday evening but today it is gone. Just informing the board.
+
+Summariser: does the 1-sentence summary contain the key topic word?
+   k = 1:  most-frequent-words summary 38 of 52 = 73%     first-1-sentences summary 30 of 52 = 58%
+   k = 2:  most-frequent-words summary 51 of 52 = 98%     first-2-sentences summary 51 of 52 = 98%
+
+   complaint : Hello sir, I live in Velachery since ten years. Construction dust covers our street every morning. The air is dirty and the trucks never cover their loads.
+   frequent  : The air is dirty and the trucks never cover their loads.
+   first     : Hello sir, I live in Velachery since ten years.
+
+   complaint : I am writing about the Ennore power plant. Ash flies into our houses and the smell is foul. Nobody listens to our complaints.
+   frequent  : Ash flies into our houses and the smell is foul.
+   first     : I am writing about the Ennore power plant.
+
+   complaint : Good morning. Our school is near the highway at Alandur. The dust and noise are bad for students. The air is unsafe and the teachers are worried.
+   frequent  : The dust and noise are bad for students.
+   first     : Good morning.
+
+Time per complaint and for a month of 50,000 complaints
+   sentiment label()        6.4 microseconds per complaint     0.32 s for 50,000 complaints
+   summarise(k=1)          16.0 microseconds per complaint     0.80 s for 50,000 complaints
+   first_k(k=1)             2.5 microseconds per complaint     0.13 s for 50,000 complaints
+
+--- fairness checks ---
+1. Only the 11 words of the 'Complete the Code' lists: agrees on 42 of 52 = 80.8%
+2. 12 NEW complaints written after the word lists were frozen (window 1): agrees on 10 of 12 = 83.3%
+2. 12 NEW complaints written after the word lists were frozen (window 2): agrees on 10 of 12 = 83.3%
+      scorer neutral  me negative | Pathetic response from the call centre. Three calls and nobody has called back. The pollution c
+      scorer positive me neutral  | Please extend the helpline hours. The service is helpful but it closes before the evening peak 
+   (the first 52 complaints were read while the 60-word lists were chosen, so 94 % is optimistic)

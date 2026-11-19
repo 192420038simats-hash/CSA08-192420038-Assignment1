@@ -1,0 +1,9 @@
+method                                           time s   extra per call (microseconds)
+no debugging at all                               0.056                            0.00
+print() to a file                                 0.113                            0.28
+logging.debug, level DEBUG, to a file             2.015                            9.80
+logging.debug, level WARNING (switched off)       0.092                            0.18
+logging.disable(CRITICAL)                         0.077                            0.10
+if DEBUG: print(...)  with DEBUG = False          0.056                            0.00
+
+log file written by the DEBUG-level run: 9.8 MB for 200,000 messages

@@ -1,0 +1,14 @@
+commands typed into pdb:  b buggy_cleaning.py:10 | c | p f | p c | p f - 32 * 5 / 9 | p (f - 32) * 5 / 9 | n | q
+
+> buggy_cleaning.py(1)<module>()
+-> """A4 - a cleaning function with a deliberate precedence bug, used to demonstrate print / assert / logging / pdb."""
+(Pdb) Breakpoint 1 at buggy_cleaning.py:10
+(Pdb) > buggy_cleaning.py(10)f_to_c()
+-> log.debug("f_to_c(%s) = %s", f, c)
+(Pdb) 75.2
+(Pdb) 57.422222222222224
+(Pdb) 57.422222222222224
+(Pdb) 24.0
+(Pdb) > buggy_cleaning.py(11)f_to_c()
+-> assert -10 <= c <= 55, f"temperature {c:.1f} C is impossible for input {f} F"
+(Pdb) DEBUG f_to_c: f_to_c(75.2) = 57.422222222222224

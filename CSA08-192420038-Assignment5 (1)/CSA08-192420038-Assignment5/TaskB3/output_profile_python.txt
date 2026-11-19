@@ -1,0 +1,27 @@
+         1391210 function calls (1391208 primitive calls) in 0.705 seconds
+   Ordered by: internal time
+   List reduced from 45 to 9 due to restriction <9>
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+   105121    0.191    0.000    0.306    0.000 csv.py:112(__next__)
+        1    0.089    0.089    0.704    0.704 methods.py:7(by_python_loops)
+   105122    0.066    0.000    0.067    0.000 {built-in method builtins.next}
+     4380    0.059    0.000    0.255    0.000 statistics.py:154(_sum)
+   101965    0.029    0.000    0.029    0.000 {method 'as_integer_ratio' of 'float' objects}
+    30211    0.028    0.000    0.038    0.000 fractions.py:186(__new__)
+   210241    0.027    0.000    0.027    0.000 csv.py:98(fieldnames)
+   101965    0.024    0.000    0.053    0.000 statistics.py:287(_exact_ratio)
+    21451    0.023    0.000    0.042    0.000 fractions.py:710(_add)
+
+--- the same, sorted by cumulative time ---
+         1391210 function calls (1391208 primitive calls) in 0.705 seconds
+   Ordered by: cumulative time
+   List reduced from 45 to 6 due to restriction <6>
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.089    0.089    0.704    0.704 methods.py:7(by_python_loops)
+   105121    0.191    0.000    0.306    0.000 csv.py:112(__next__)
+     4380    0.007    0.000    0.294    0.000 statistics.py:468(mean)
+     4380    0.059    0.000    0.255    0.000 statistics.py:154(_sum)
+     4380    0.013    0.000    0.124    0.000 {built-in method builtins.sum}
+    21451    0.015    0.000    0.069    0.000 fractions.py:613(forward)
+
+statistics.mean on 4,380 groups: 0.082 s    sum()/len(): 0.002 s   (max difference 2.84e-14)

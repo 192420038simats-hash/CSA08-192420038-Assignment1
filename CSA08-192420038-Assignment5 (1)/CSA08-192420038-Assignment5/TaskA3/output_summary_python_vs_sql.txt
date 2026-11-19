@@ -1,0 +1,4 @@
+stations       rows |  Python loops: time  peak memory |  SQL GROUP BY: time  peak memory | same result
+       1      8,760 |             0.028 s       1.8 MB |             0.006 s      0.09 MB | True
+      12    105,120 |             0.375 s      21.6 MB |             0.094 s      1.16 MB | True
+     120  1,051,200 |             4.230 s     218.3 MB |             0.988 s     11.56 MB | True

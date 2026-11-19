@@ -1,0 +1,12 @@
+step                                 count
+files read                             372
+raw rows                              8966
+duplicate rows removed                  38
+bad hour rows                           16
+dates reformatted                      747
+temperatures converted F->C           1420
+missing values                        1338
+impossible values -> missing           205
+values forward-filled                 1542
+rows stored in SQLite                 8912
+files skipped: [] | total time 0.14 s

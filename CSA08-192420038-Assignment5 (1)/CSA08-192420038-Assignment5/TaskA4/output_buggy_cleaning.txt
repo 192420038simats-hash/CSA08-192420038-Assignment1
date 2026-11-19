@@ -1,0 +1,11 @@
+DEBUG f_to_c: f_to_c(75.2) = 57.422222222222224
+Traceback (most recent call last):
+  File "/home/claude/a5/CSA08-192420038-Assignment5/TaskA4/buggy_cleaning.py", line 21, in <module>
+    main()
+  File "/home/claude/a5/CSA08-192420038-Assignment5/TaskA4/buggy_cleaning.py", line 17, in main
+    print(f"{f} F ->", f_to_c(f), "C")
+                       ^^^^^^^^^
+  File "/home/claude/a5/CSA08-192420038-Assignment5/TaskA4/buggy_cleaning.py", line 11, in f_to_c
+    assert -10 <= c <= 55, f"temperature {c:.1f} C is impossible for input {f} F"
+           ^^^^^^^^^^^^^^
+AssertionError: temperature 57.4 C is impossible for input 75.2 F

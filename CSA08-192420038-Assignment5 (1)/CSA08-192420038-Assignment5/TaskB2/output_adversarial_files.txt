@@ -1,0 +1,20 @@
+missing column (no pm10):
+   REJECTED by CleaningError: expected columns ['date', 'hour', 'pm25', 'pm10', 'no2', 'temp'], found ['date', 'hour', 'pm25', 'no2', 'temp']; missing ['pm10']
+wrong delimiter (semicolon):
+   REJECTED by CleaningError: wrong delimiter: header read as one column 'date;hour;pm25;pm10;no2;temp'
+Windows-1252 text (em dash):
+   log: WARNING /tmp/tmp1nnhvh_l/f.csv is not UTF-8; read as Windows-1252
+   accepted, 2 row(s): [(0, 48.0), (1, None)]
+UTF-16 with BOM:
+   accepted, 1 row(s): [(0, 48.0)]
+empty file:
+   REJECTED by CleaningError: file is empty
+only a header:
+   accepted, 0 row(s): []
+extra column:
+   REJECTED by CleaningError: expected columns ['date', 'hour', 'pm25', 'pm10', 'no2', 'temp'], found ['date', 'hour', 'pm25', 'pm10', 'no2', 'temp', 'flag']
+
+What a naive csv.DictReader(open(path, encoding='utf-8')) program would do with the first three files:
+   missing column (no pm10)      KeyError: 'pm10'
+   wrong delimiter (semicolon)   KeyError: 'pm10'
+   Windows-1252 text (em dash)   UnicodeDecodeError: 'utf-8' codec can't decode byte 0x97 in position 67: invalid start byte

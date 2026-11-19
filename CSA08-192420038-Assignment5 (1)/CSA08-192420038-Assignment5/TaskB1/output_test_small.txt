@@ -1,0 +1,30 @@
+BEFORE (raw file, one line per row):
+   0  date,hour,pm25,pm10,no2,temp      
+   1  2026-10-01,0,48.0,80.0,30.0,75.2  ok (temperature in Fahrenheit)
+   2  2026-10-01,1,NA,82,31,75.9        pm25 = NA
+   3  2026-10-01,2,,85,29,76.1          pm25 blank
+   4  2026-10-01,3,-12,70,28,74.0       pm25 negative
+   5  2026-10-01,4,9999,1500,33,73.4    pm25 and pm10 too large
+   6  2026-10-01,5,ERR,70,31,73.0       pm25 is the word ERR
+   7  2026-10-01,0,48.0,80.0,30.0,75.2  exact duplicate of line 1
+   8  01/10/2026,6,55,90,35,72.5        date written dd/mm/yyyy
+   9  2026-10-01,24,60,95,34,72.0       hour 24 does not exist
+  10  2026-10-01,7, 62 ,95,34,72.0      spaces around the number
+  11  2026-10-01,8,64,98,NA,300         no2 = NA, temp 300 F impossible
+  12  2026-10-01,9,66,99,36,72.5        ok
+
+AFTER cleaning (no fill)           AFTER forward fill (limit 3 hours)
+  day         h   pm25   pm10   no2  temp_c   |   pm25   pm10   no2  temp_c
+  2026-10-01  0     48     80    30      24   |     48     80    30      24
+  2026-10-01  1   None     82    31    24.4   |     48     82    31    24.4
+  2026-10-01  2   None     85    29    24.5   |     48     85    29    24.5
+  2026-10-01  3   None     70    28    23.3   |     48     70    28    23.3
+  2026-10-01  4   None   None    33      23   |   None     70    33      23
+  2026-10-01  5   None     70    31    22.8   |   None     70    31    22.8
+  2026-10-01  6     55     90    35    22.5   |     55     90    35    22.5
+  2026-10-01  7     62     95    34    22.2   |     62     95    34    22.2
+  2026-10-01  8     64     98  None    None   |     64     98    34    22.2
+  2026-10-01  9     66     99    36    22.5   |     66     99    36    22.5
+
+counters: {'raw rows': 12, 'temperatures converted F->C': 10, 'missing values': 4, 'impossible values -> missing': 4, 'duplicate rows removed': 1, 'dates reformatted': 1, 'bad hour rows': 1, 'values forward-filled': 6}
+all checks passed

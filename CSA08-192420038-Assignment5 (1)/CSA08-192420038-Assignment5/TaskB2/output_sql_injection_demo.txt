@@ -1,0 +1,11 @@
+input                 string joined with +                                          ? placeholder
+normal name           [('Adyar', 48.0)]                                             [('Adyar', 48.0)]
+name with a quote     OperationalError: near "Brien": syntax error                  [("O'Brien Road", 70.0)]
+injection             [('Adyar', 48.0), ('Guindy', 95.0), ("O'Brien Road", 70.0),   []
+injection with UNION  [('aq', 0)]                                                   []
+
+f-string version with the injection returns every row (same as +)
+
+A statement that DELETES data (sqlite3 refuses to run two statements in execute(), but older drivers do not):
+   ProgrammingError: You can only execute one statement at a time.
+table still exists: 4 rows

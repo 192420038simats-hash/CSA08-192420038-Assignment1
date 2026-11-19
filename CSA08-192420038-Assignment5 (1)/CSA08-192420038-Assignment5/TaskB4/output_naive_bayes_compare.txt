@@ -1,0 +1,14 @@
+64 labelled complaints
+  Naive Bayes, leave-one-out accuracy : 70.3%   (trained on 63 complaints at a time)
+  word list (window 1) accuracy       : 92.2%   (no training; list written while reading 52 of them)
+    positive  recall: Naive Bayes 71%   word list 100%
+    negative  recall: Naive Bayes 84%   word list 90%
+    neutral   recall: Naive Bayes 44%   word list 88%
+
+Time per complaint: word list 6.2 us | Naive Bayes in a batch of 51,200 9.2 us | Naive Bayes one at a time 69 us
+
+Memory of the trained model (vocabulary 410 words): 9.6 KiB of numbers + the vocabulary dictionary 13 KiB
+  vocabulary of   5,000 words (synthetic): model arrays   0.12 MB, vocabulary dict   0.10 MB
+  vocabulary of  41,827 words (synthetic): model arrays   1.00 MB, vocabulary dict   0.96 MB
+  vocabulary of  72,425 words (synthetic): model arrays   1.74 MB, vocabulary dict   1.92 MB
+word list in memory: 60 words, 2.4 KiB

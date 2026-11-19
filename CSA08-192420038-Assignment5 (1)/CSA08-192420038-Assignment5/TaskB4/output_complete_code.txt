@@ -1,0 +1,6 @@
+positive | Roads are clean and the bus was fast.
+negative | Smoke from the factory, air is bad.
+negative | The staff were not helpful.
+positive | Not bad, service improved.
+
+wrongly labelled: positive | The air is not very clean.   (meaning: negative; 'very' sits between 'not' and 'clean')

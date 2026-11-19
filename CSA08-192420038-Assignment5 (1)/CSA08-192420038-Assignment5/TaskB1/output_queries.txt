@@ -1,0 +1,23 @@
+Q1  Average PM2.5 of Adyar in October (SQL): 47.44
+Q2  Three stations with the highest monthly mean PM2.5 (SQL):
+      Manali          118.27
+      Ennore           106.8
+      Kodungaiyur     101.73
+Q3  Days on which the daily mean exceeded 60 ug/m3, per station (SQL):
+      Ennore          31
+      Guindy          31
+      Kodungaiyur     31
+      Manali          31
+      Royapuram       31
+      Tondiarpet      31
+      Perungudi       23
+      T Nagar         18
+      Alandur         11
+      Velachery        6
+      Anna Nagar       2
+      Adyar            1
+
+CSV + Python loops : Q1 47.44   Q2 [('Manali', 118.27), ('Ennore', 106.8), ('Kodungaiyur', 101.73)]
+agree with SQL     : True True True
+time for the 3 questions: CSV loops 17.9 ms (read + compute)   SQL 6.3 ms
+lines of code: SQL = 3 statements of 1-4 lines; CSV loops = about 12 lines

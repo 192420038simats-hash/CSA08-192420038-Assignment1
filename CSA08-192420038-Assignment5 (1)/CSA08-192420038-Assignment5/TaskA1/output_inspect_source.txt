@@ -1,0 +1,25 @@
+372 files, 8,966 data rows, header: ['date', 'hour', 'pm25', 'pm10', 'no2', 'temp']
+
+problem                              count   example
+date written dd/mm/yyyy                747   t_nagar_2026-10-01.csv line 2: 01/10/2026,0,42.8,72.7,46.2,26.0
+blank value                            731   adyar_2026-10-01.csv line 10: 2026-10-01,8,65.6,,,27.1
+'NA' value                             508   adyar_2026-10-01.csv line 2: 2026-10-01,0,54.8,84.7,NA,26.2
+negative pollutant value               110   adyar_2026-10-04.csv line 5: 2026-10-04,3,30.2,-37.3,45.8,21.3
+text instead of a number               102   adyar_2026-10-03.csv line 13: 2026-10-03,11,39.2,ERR,36.1,25.3
+impossibly large pollutant value        96   adyar_2026-10-06.csv line 3: 2026-10-06,1,58.6,104.3,999.9,25.1
+duplicate (date, hour) row              38   adyar_2026-10-02.csv line 16: 2026-10-02,13,41.0,68.0,38.1,32.4
+hour 24 (does not exist)                16   adyar_2026-10-29.csv line 9: 2026-10-29,24,54.9,89.8,43.7,23.8
+
+Mean of the temperature column per station (a value above 50 cannot be degrees Celsius):
+   velachery        80.0   <-- Fahrenheit
+   kodungaiyur      80.0   <-- Fahrenheit
+   anna_nagar       26.7
+   manali           26.7
+   guindy           26.7
+   tondiarpet       26.7
+   ennore           26.6
+   alandur          26.6
+   adyar            26.6
+   t_nagar          26.6
+   royapuram        26.6
+   perungudi        26.6

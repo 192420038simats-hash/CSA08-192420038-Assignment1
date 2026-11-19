@@ -1,0 +1,6 @@
+# Python 3.12
+pandas>=2.2          # B1, B3 (tested with 3.0.6)
+matplotlib>=3.8      # B1 charts (tested with 3.11.2)
+scikit-learn>=1.4    # only TaskB4/naive_bayes_compare.py (tested with 1.9.1)
+Pillow>=10           # only make_screenshots.py
+# Everything else is the standard library: csv, sqlite3, statistics, logging, cProfile, pstats, tracemalloc, difflib, pdb.

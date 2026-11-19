@@ -1,0 +1,13 @@
+station_id,name,latitude,longitude,temp_unit
+ADY,Adyar,13.0063,80.2574,C
+ALN,Alandur,13.0030,80.2010,C
+ANN,Anna Nagar,13.0850,80.2101,C
+GND,Guindy,13.0067,80.2206,C
+KOD,Kodungaiyur,13.1280,80.2530,F
+MAN,Manali,13.1667,80.2600,C
+PER,Perungudi,12.9650,80.2461,C
+ROY,Royapuram,13.1130,80.2940,C
+TNG,T Nagar,13.0418,80.2341,C
+VEL,Velachery,12.9815,80.2180,F
+ENN,Ennore,13.2140,80.3200,C
+TON,Tondiarpet,13.1260,80.2900,C

@@ -1,0 +1,13 @@
+Adyar, 5 Oct 2026, 24 hourly PM2.5 (first 8): [25.3, 56.2, 48.4, 45.0, 70.5, 30.9, 61.7, 49.0]
+
+normal day: n = 24
+  raw value        : ['25.3', '56.2', '48.4', '45', '70.5', '30.9'] ... last 30.7
+  min-max (0 to 1) : [0.062, 0.627, 0.484, 0.422, 0.888, 0.165] ... last 0.161
+  z-score          : [-1.456, 0.875, 0.287, 0.03, 1.954, -1.033] ... last -1.048
+  min-max: values of the ordinary hours lie between 0.000 and 1.000
+
+same day + one real smoke event of 480: n = 25
+  raw value        : ['25.3', '56.2', '48.4', '45', '70.5', '30.9'] ... last 480
+  min-max (0 to 1) : [0.007, 0.075, 0.058, 0.05, 0.106, 0.02] ... last 1.0
+  z-score          : [-0.425, -0.067, -0.158, -0.197, 0.098, -0.36] ... last 4.843
+  min-max: values of the ordinary hours lie between 0.000 and 0.119

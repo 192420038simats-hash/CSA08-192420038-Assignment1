@@ -1,0 +1,14 @@
+type                window 1 (given)  window 2    my reading  sentence
+sarcasm             positive X        positive X  negative    Oh wonderful, another day of breathing smoke. Great job, board.
+sarcasm             positive X        positive X  negative    The app is so fast that it crashed again. Great job.
+double negative     neutral X         neutral X   positive    The air is not unclean today.
+double negative     positive X        positive X  negative    I can't say the air is not dirty.
+negator far away    positive X        negative    negative    The air is not very clean.
+mixed opinion       negative          negative    negative    The staff were polite but the air is terrible and the smoke continues.
+mixed opinion       neutral X         neutral X   negative    The app is fast and clean but the readings are wrong and the station is broken.
+word in other sense negative X        negative X  positive    The smoke detector at the school works very well.
+unknown words       neutral X         neutral X   negative    Pathetic. The pollution here is a disgrace.
+question            positive X        positive X  neutral     Is the air clean in Adyar today?
+plain negative      negative          negative    negative    The air is bad and dirty.
+
+wrong labels (X): window 1 = 9 of 11, window 2 = 8 of 11

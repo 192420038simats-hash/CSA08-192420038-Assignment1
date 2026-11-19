@@ -1,0 +1,23 @@
+database built: 967,680 rows in 4.3 s, 58 MB
+
+query                                           no index  index (station, day)    change
+Q1 mean of ONE station for one month              50.6ms                 0.3ms    183.1x
+Q2 daily summary of ONE station                   51.1ms                 2.1ms     24.2x
+Q3 network mean of ONE day                        48.9ms                47.1ms      1.0x
+Q4 mean of every station (GROUP BY station)      266.8ms               129.3ms      2.1x
+Q5 days over 60 for every station                438.6ms               153.9ms      2.8x
+
+slowest query before the index: Q5 days over 60 for every station
+index creation time 0.42 s; database file grew from 58 MB to 81 MB
+plan Q1 before: SCAN readings
+        after : SEARCH readings USING INDEX idx_station_day (station_id=? AND day>? AND day<?)
+plan Q2 before: SCAN readings | USE TEMP B-TREE FOR GROUP BY
+        after : SEARCH readings USING INDEX idx_station_day (station_id=?)
+plan Q3 before: SCAN readings
+        after : SCAN readings
+plan Q4 before: SCAN readings | USE TEMP B-TREE FOR GROUP BY
+        after : SCAN readings USING INDEX idx_station_day
+plan Q5 before: CO-ROUTINE (subquery-1) | SCAN readings | USE TEMP B-TREE FOR GROUP BY | SCAN (subquery-1)
+        after : CO-ROUTINE (subquery-1) | SCAN readings USING INDEX idx_station_day | SCAN (subquery-1) | 
+
+with a COVERING index (station_id, day, pm25): Q5 = 99.8 ms   (plan: CO-ROUTINE (subquery-1) | SCAN readings USING COVERING INDEX idx_cover | SCAN (s)
